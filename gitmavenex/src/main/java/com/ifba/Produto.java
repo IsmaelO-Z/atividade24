@@ -1,20 +1,17 @@
 package com.ifba;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Produto extends Pedido{
+public class Produto {
 
     private UUID id;
     private String nome;
@@ -22,5 +19,8 @@ public class Produto extends Pedido{
     private String descricao;
     private BigDecimal valor;
     private Boolean ativo;
+    private Loja loja;
     private List<String> tags;
+    private List<CategoriaProduto> categorias;
+    private List<FotoProduto> fotos;
 }

@@ -1,19 +1,19 @@
 package com.ifba;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class ItemPedido extends Pedido {
+public class ItemPedido {
     
     private Integer quantidade;
     private BigDecimal valorTotal;
     private String observacao;
+    private Produto produto;
+    private Pedido pedido;
 }

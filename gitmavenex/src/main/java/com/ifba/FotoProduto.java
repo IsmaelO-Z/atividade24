@@ -1,17 +1,15 @@
 package com.ifba;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class FotoProduto extends Pedido {
+public class FotoProduto {
 
     private UUID id;
     private String titulo;

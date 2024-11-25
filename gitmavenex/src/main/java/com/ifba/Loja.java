@@ -1,21 +1,21 @@
 package com.ifba;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-@Getter
-@Setter
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Loja extends Pedido{
+public class Loja {
 
     private UUID id;
     private String nome;
@@ -30,5 +30,9 @@ public class Loja extends Pedido{
     private Integer tempoMaximoEntrega;
     private Map<String, String> contatos;  
     private Map<String, String> redes;     
-    private String urlFotoBanner;        
+    private String urlFotoBanner;  
+    private Endereco enderecos;
+    private List<FormaPagamento> formasPagamento;   
+    private List<Usuario> responsaveis;
+    private List<Produto> produtos;
 }

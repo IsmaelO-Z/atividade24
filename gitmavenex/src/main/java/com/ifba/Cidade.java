@@ -1,18 +1,17 @@
 package com.ifba;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Cidade extends Pedido{
+public class Cidade{
 
     private UUID id;    
     private String nome; 
+    private Estado estado;
 }

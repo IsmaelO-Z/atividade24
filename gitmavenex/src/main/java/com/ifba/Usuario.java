@@ -1,19 +1,18 @@
 package com.ifba;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Usuario extends Pedido {
+public class Usuario {
 
     private UUID id;
     private String nomeCompleto;
@@ -24,5 +23,10 @@ public class Usuario extends Pedido {
     private LocalDateTime dataCadastro;
     private LocalDateTime nascimento;
     private Map<String, String> contatos;  
-    private String urlFoto;              
+    private String urlFoto; 
+    private List<Endereco> enderecos;
+    private Endereco enderecoPrincipal;
+    private Genero genero;                         
+    private List<GrupoUsuario> grupos; 
+    private List<Pedido> pedidos;
 }
